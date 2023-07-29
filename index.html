@@ -1,121 +1,196 @@
 <!DOCTYPE html>
 <html>
-    <!--Head-->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" />
-        <title>Nicolas Pelletier</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,700|Playfair+Display:400,700&display=swap">
-        <link rel="stylesheet" type="text/css" href="css/portfolio.css">
-    </head>
+<!--Head-->
 
-    <!--Body-->
-    <body class="Background" id="Home">
-        
-        <!--Navbar-->
-        <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Nicolas Pelletier Portfolio</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,700|Playfair+Display:400,700&display=swap">
+    <link rel="shortcut icon" type="img/jpg" href="images/coding_image2.png">
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+</head>
 
-        <!--Breaks inserted to add space between navbar and the first heading-->
+<!--Body-->
+
+<body class="Background" id="Home">
+
+    <!--Navbar-->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+    </div>
+
+    <!--Breaks inserted to add space between navbar and the first heading-->
+    <br>
+    <br>
+
+    <!--Background video-->
+    <div>
+        <video autoplay muted loop id="Typing_Video">
+            <source src="./images/video/Developer_video.mp4" type="video/mp4">
+            <!--Display message if video fails to run-->
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!--Video text-->
+    <div class="Video_Text">
         <br>
-        <br>
-
-        <!--Background video-->
-        <div>
-            <video autoplay muted loop id="Typing_Video">
-                <source src="./images/video/Developer_video.mp4" type="video/mp4">
-                <!--Display message if video fails to run-->
-                Your browser does not support HTML5 video.
-            </video>
-        </div>
-
-        <!--Video text-->
-        <div class="Video_Text">
-            <br>
-            <h1 class="white-text">Welcome to my portfolio</h1>
-            <strong>
-                <p class="center">
-                    <br><br><br>My name is Nicolas Pelletier, a passionate and dedicated developer eager to make my mark in the professional world.<br><br>
-                    Coding has become my creative outlet, where I bring ideas to life through elegant designs and functional websites.<br><br> 
-                    My goal is to build a better web experience, one line of code at a time.<br><br>
-                    <br>
-                    <br>
-                     So come on in and explore my work!
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                </p>
-            </strong>
-        </div>
-
-        <!--About section-->
-        <div class="Row" id="About">
-            <!--Left column-->
-            <div class="Column_2">
-                <img src="./images/coding_image1.png" alt="Replace with your own image and description">
-            </div>
-            <!--Right column-->
-            <div class="Column_1">
-                <h1>About</h1>
-                <p>
-                    As a new developer, I embrace challenges and constantly seek opportunities to learn and grow.<br>
-                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
-                    <br>
-                    <br>I am striving to be a game developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
-                </p>
-            </div>
-        </div>
-
-        <!--GitHub section-->
-        <div class="Row" id="GitHub">
-            <!--Left column-->
-            <div class="Column_1">
-                <h1>GitHub</h1>
-                <p>
-                    Check out my coding projects on my GitHub profile here:
-                    <br>
-                    <p class="center"><a href="https://github.com/Npelletier91" target="_blank">https://github.com/Npelletier91</a></p>
-                </p>
-            </div>
-            <!--Right column-->
-            <div class="Column_2">
-                <a href="https://github.com/Npelletier91" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
-            </div>
-        </div>
-
-        <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="./images/coding_image2.png" alt="Contact_Image">
-            </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-                </form>
-            </div>
-        </div>
-
-        <!--Footer section-->
-        <footer>
-            <p>
-                <p class="center"> <a href="" target="_blank"></a></p>
+        <h1 class="white-text">Welcome to my portfolio</h1>
+        <strong>
+            <p class="center">
+                <br><br><br>My name is Nicolas Pelletier, a passionate and dedicated developer eager to make my mark in
+                the professional world.<br><br>
+                Coding has become my creative outlet, where I bring ideas to life through elegant designs and functional
+                websites.<br><br>
+                My goal is to build a better web experience, one line of code at a time.<br><br>
+                <br>
+                <br>
+                So come on in and explore my work!
+                <br>
+                <br>
+                <br>
                 <br>
             </p>
-        </footer>
-    </body>
+        </strong>
+    </div>
+
+    <!-- Slideshow  -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!-- Slide 1 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/Square Personal Photo.png" alt="Picture of myself">
+                    <div class="text">I'm here to assist you on any project!</div>
+                </div>
+                <!-- Slide 2 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg"
+                        alt="HTML, CSS, and JS logos">
+                    <div class="text">I am a software developer,<br> trained in:<br>HTML, CSS, JavaScript,
+                    </div>
+                </div>
+                <!-- Slide 3 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/C++.jpg" alt="Python logo">
+                    <div class="text">the popular programming language C++,</div>
+                </div>
+                <!-- Slide 4 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                    <div class="text">C#, .NET Framework, </div>
+                </div>
+                <!-- Slide 5 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL logo">
+                    <div class="text">back end development, databases and SQL.</div>
+                </div>
+                <!-- Slide 6 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/Square Custom Picture.jpg"
+                        alt="Replace with a picture of your choosing">
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                </div>
+                <!-- Previous and next buttons -->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br> <!-- Adds a space between the slideshow images and the dots -->
+
+            <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--About section-->
+    <div class="Row" id="About">
+        <!--Left column-->
+        <div class="Column_2">
+            <img src="./images/coding_image1.png" alt="Replace with your own image and description">
+        </div>
+        <!--Right column-->
+        <div class="Column_1">
+            <h1>About</h1>
+            <p>
+                As a new developer, I embrace challenges and constantly seek opportunities to learn and grow.<br>
+                <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech
+                    Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and
+                programming languages: HTML, CSS, JavaScript, SQL, C# and more.
+                <br>
+                <br>I am striving to be a game developer and would love to work with you on your project. <a
+                    href="#Contact">Contact</a> me below!
+            </p>
+        </div>
+    </div>
+
+    <!--GitHub section-->
+    <div class="Row" id="GitHub">
+        <!--Left column-->
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>
+                Check out my coding projects on my GitHub profile here:
+                <br>
+            <p class="center"><a href="https://github.com/Npelletier91"
+                    target="_blank">https://github.com/Npelletier91</a></p>
+            </p>
+            <h1>LinkedIn</h1>
+            <p class="center"><a href="https://www.linkedin.com/in/nicolas-pelletier-ab0b6a268" target="_blank">My LinkedIn</a></p>
+        </div>
+        <!--Right column-->
+        <div class="Column_2">
+            <a href="https://github.com/Npelletier91" target="_blank"><img src="images/GitHub.png"
+                    alt="GitHub Logo"></a>
+        </div>
+    </div>
+
+    <!--Contact section-->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+                <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to 
+                    an email address of our choosing - note: it will not run unless live on the internet, you have to
+                     push it to your online website first -->
+                
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Type your name here" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                <input type="text" placeholder="Type your phone number here" name="phone">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Type your email address here" name="email" required>
+                <label for="message"><b>Message</b></label>
+                <input type="text" placeholder="Type your message here" name="message">
+
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Footer section-->
+    <footer>
+        <p>
+        <p class="center"> &copy; Nicolas Pelletier 2023 <a href="" target=""></a></p>
+        <br>
+        </p>
+    </footer>
+    <script src="JS/main.js"></script>
+</body>
+
 </html>
