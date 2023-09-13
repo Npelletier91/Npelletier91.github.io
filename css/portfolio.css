@@ -327,10 +327,12 @@ footer {
 } 
 
 .Column_1 {
+    
     float: left;
+    font-size: 1.2vw;
     width: 50%; /* This ensures the column takes up half of the page width */
     padding: 10px;
-    padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
+    padding-top: 1%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
     background-color: #dcdcdc; /* Sets the background color of the columns with class Column_1 */
 }
@@ -339,10 +341,15 @@ footer {
 @media screen and (max-width: 576px) {
     .Column_1 {
         overflow: auto;
+        .text {
+            font-size: 14px; /* Adjust this value to your desired maximum font size */
+        }
     }
 }
 
+
 .Column_2 {
+    
     float: left;
     width: 50%;
     padding: 10px;
