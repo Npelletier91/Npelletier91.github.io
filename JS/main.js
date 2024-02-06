@@ -44,3 +44,31 @@ document.addEventListener("click", function (event) {
         closeForm();
     }
 }, false)
+
+
+// Initialize index for the second set of slides
+var slideIndexSecond = 1;
+showSlidesSecond(slideIndexSecond);
+
+// Functions to change slides for the second slideshow
+function plusSlidesSecond(n) {
+    showSlidesSecond(slideIndexSecond += n);
+}
+
+function currentSlideSecond(n) {
+    showSlidesSecond(slideIndexSecond = n);
+}
+
+// Show slides for the second slideshow
+function showSlidesSecond(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlidesSecond");
+    // If using dots for the second slideshow, manage them here as well
+    if (n > slides.length) {slideIndexSecond = 1}
+    if (n < 1) {slideIndexSecond = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndexSecond - 1].style.display = "block";
+    // If using dots for the second slideshow, activate the current dot here
+}
