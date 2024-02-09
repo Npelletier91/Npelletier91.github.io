@@ -489,9 +489,9 @@ footer {
         font-size: 1.6vw; /* Adjust font size for extra-large screens */
     }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1550px) {
     .Column_1 {
-        font-size: 1.4vw; /* Further adjust font size for very large screens */
+        font-size: 1.3vw; /* Further adjust font size for very large screens */
     }
 }
 
