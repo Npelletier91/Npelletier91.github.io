@@ -72,3 +72,29 @@ function showSlidesSecond(n) {
     slides[slideIndexSecond - 1].style.display = "block";
     // If using dots for the second slideshow, activate the current dot here
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.Row'); // Select all sections with the class 'Row'
+  
+    const checkVisibility = () => {
+        const viewportHeight = window.innerHeight;
+
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            
+            // Check if the section is in view
+            if (rect.top < viewportHeight && rect.bottom > 0) {
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible'); // Optional: remove 'visible' class if section is out of view
+            }
+        });
+    };
+  
+    window.addEventListener('scroll', checkVisibility);
+    // Initial check in case any section is already in view on load
+    checkVisibility();
+});
+
+
+  
