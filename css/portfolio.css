@@ -586,11 +586,12 @@ footer {
 
 
 .Pop_Up_Button {
-    position: fixed; 
+    position: fixed;
+    border-radius: 20px;
     bottom: 1.75vw; 
     right: 1.75vw; 
     width: 25vw; 
-    background-color: white; 
+    background-color: #3C67B1; 
     color: black; 
     border: solid black; 
     cursor: pointer; 
@@ -652,8 +653,8 @@ button {
 
 
 button:hover, .form-container .btn:hover {
-    color: white; 
-    background-color: black; 
+    color: black; 
+    background-color: white; 
     transition-duration: 1s; 
     -webkit-transition-duration: 1s; 
     border-color: silver; 
